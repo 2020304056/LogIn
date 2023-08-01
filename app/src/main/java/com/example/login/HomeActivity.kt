@@ -1,3 +1,4 @@
+// lv3. 자기소개 페이지 만들기
 package com.example.login
 
 import android.os.Bundle
