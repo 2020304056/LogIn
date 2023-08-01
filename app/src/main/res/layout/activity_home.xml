@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/imageViewIntroduce"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/introduce_image" /> <!-- Add margin bottom to create spacing -->
+
+    <TextView
+        android:id="@+id/textViewUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디: "
+        android:textSize="20sp"
+        android:layout_below="@id/imageViewIntroduce"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" /> <!-- Add margin top to create spacing -->
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름: "
+        android:textSize="20sp"
+        android:layout_below="@id/textViewUserId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" /> <!-- Add margin top to create spacing -->
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나이: "
+        android:textSize="20sp"
+        android:layout_below="@id/textViewName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" /> <!-- Add margin top to create spacing -->
+
+    <TextView
+        android:id="@+id/textViewMBTI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MBTI: "
+        android:textSize="20sp"
+        android:layout_below="@id/textViewAge"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" /> <!-- Add margin top to create spacing -->
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종료"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64dp"/>
+
+</RelativeLayout>
