@@ -1,3 +1,4 @@
+// lv1. 로그인 페이지 만들기
 package com.example.login
 
 import android.content.Intent
