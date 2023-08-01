@@ -1,3 +1,4 @@
+// lv2. 회원가입 페이지 만들기
 package com.example.login
 
 import android.content.Intent
