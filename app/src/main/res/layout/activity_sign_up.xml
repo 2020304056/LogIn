@@ -18,7 +18,7 @@
         android:layout_below="@id/imageViewTitle"
         android:hint="이름을 입력하세요."
         android:inputType="text"
-        android:padding="32dp" />
+        android:padding="16dp" />
 
     <EditText
         android:id="@+id/editTextId"
@@ -27,7 +27,8 @@
         android:layout_below="@id/editTextName"
         android:hint="아이디를 입력하세요."
         android:inputType="text"
-        android:padding="32dp" />
+        android:padding="16dp" />
+
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -36,7 +37,25 @@
         android:layout_below="@id/editTextId"
         android:hint="비밀번호를 입력하세요."
         android:inputType="textPassword"
-        android:padding="32dp" />
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword"
+        android:hint="나이를 입력하세요."
+        android:inputType="text"
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/editTextMBTI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAge"
+        android:hint="MBTI를 입력하세요."
+        android:inputType="text"
+        android:padding="16dp" />
 
     <Button
         android:id="@+id/buttonSignUp"
@@ -44,6 +63,6 @@
         android:layout_height="wrap_content"
         android:text="회원가입"
         android:layout_below="@id/editTextPassword"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="120dp" />
 
 </RelativeLayout>
