@@ -34,6 +34,9 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("userId", id)
+                intent.putExtra("userName", name)
+                intent.putExtra("userAge", age)
+                intent.putExtra("userMBTI", mbti)
                 startActivity(intent)
             }
         }
