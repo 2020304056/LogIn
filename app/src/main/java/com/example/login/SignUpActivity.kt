@@ -38,12 +38,21 @@ class SignUpActivity : AppCompatActivity() {
             if (name.isEmpty() || id.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
             } else {
-                // 회원가입 정보를 홈 페이지로 전달
+                // Store the user information in SharedPreferences
+                val sharedPrefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                val editor = sharedPrefs.edit()
+                editor.putString("userId", id)
+                editor.putString("userName", name)
+                editor.putString("userAge", age)
+                editor.putString("userMBTI", mbti)
+                editor.apply()
+
+                // Start the HomeActivity
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("userId", id)
                 intent.putExtra("userName", name)
-                intent.putExtra("userAge", age) // Replace "Your Age" with the actual age value
-                intent.putExtra("userMBTI", mbti) // Replace "Your MBTI" with the actual MBTI value
+                intent.putExtra("userAge", age)
+                intent.putExtra("userMBTI", mbti)
                 startActivity(intent)
                 finish()
             }
