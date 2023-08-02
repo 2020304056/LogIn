@@ -13,6 +13,8 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var editTextName: EditText
     private lateinit var editTextId: EditText
     private lateinit var editTextPassword: EditText
+    private lateinit var editTextAge: EditText
+    private lateinit var editTextMBTI: EditText
     private lateinit var buttonSignUp: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,12 +24,16 @@ class SignUpActivity : AppCompatActivity() {
         editTextName = findViewById(R.id.editTextName)
         editTextId = findViewById(R.id.editTextId)
         editTextPassword = findViewById(R.id.editTextPassword)
+        editTextAge = findViewById(R.id.editTextAge)
+        editTextMBTI = findViewById(R.id.editTextMBTI)
         buttonSignUp = findViewById(R.id.buttonSignUp)
 
         buttonSignUp.setOnClickListener {
             val name = editTextName.text.toString()
             val id = editTextId.text.toString()
             val password = editTextPassword.text.toString()
+            val age = editTextAge.text.toString()
+            val mbti = editTextMBTI.text.toString()
 
             if (name.isEmpty() || id.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
@@ -36,8 +42,8 @@ class SignUpActivity : AppCompatActivity() {
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("userId", id)
                 intent.putExtra("userName", name)
-                intent.putExtra("userAge", "Your Age") // Replace "Your Age" with the actual age value
-                intent.putExtra("userMBTI", "Your MBTI") // Replace "Your MBTI" with the actual MBTI value
+                intent.putExtra("userAge", age) // Replace "Your Age" with the actual age value
+                intent.putExtra("userMBTI", mbti) // Replace "Your MBTI" with the actual MBTI value
                 startActivity(intent)
                 finish()
             }
