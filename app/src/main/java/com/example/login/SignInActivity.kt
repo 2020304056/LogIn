@@ -32,6 +32,13 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
+
+                // Get the user information from SharedPreferences
+                val sharedPrefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                val name = sharedPrefs.getString("userName", "이름 없음")
+                val age = sharedPrefs.getString("userAge", "나이 없음")
+                val mbti = sharedPrefs.getString("userMBTI", "MBTI 없음")
+
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("userId", id)
                 intent.putExtra("userName", name)
